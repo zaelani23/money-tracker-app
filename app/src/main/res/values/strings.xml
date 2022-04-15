@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Money Tracker App</string>
+    <string name="str_expense">Expense</string>
+    <string name="str_rp_1000000">Rp. 1000000</string>
+    <string name="str_earnings">Earnings</string>
+    <string name="str_my_money">My Money</string>
+    <string name="str_btn_add">Button Add</string>
+    <string name="title_input_record">Input Record</string>
+    <string name="str_name">Name</string>
+    <string name="str_expense_or_income">Expense or income?</string>
+    <string name="str_income">Income</string>
+    <string name="str_amount">Amount</string>
+    <string name="str_date">Date</string>
+    <string name="str_note">Note</string>
+    <string name="str_save">Save</string>
+    <string name="str_rp">Rp.%s</string>
+    <string name="str_rp_expense">-Rp.%s</string>
+    <string name="str_delete">Delete</string>
+    <string name="title_record_detail">Detail Record</string>
+</resources>

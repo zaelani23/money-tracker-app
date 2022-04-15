@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.input.InputRecordActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/icon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/record_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/record_name"
+            app:srcCompat="@drawable/ic_text_field" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/record_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="@string/str_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_name"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/record_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/icon_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/record_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/record_amount"
+            app:srcCompat="@drawable/ic_amount" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/record_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/str_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_amount"
+            app:layout_constraintTop_toBottomOf="@id/record_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/record_amount_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/icon_service_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/tv_question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_question"
+            app:srcCompat="@drawable/ic_currency_exchange" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/str_expense_or_income"
+            app:layout_constraintStart_toStartOf="@id/record_amount"
+            app:layout_constraintTop_toBottomOf="@id/record_amount" />
+
+        <RadioGroup
+            android:id="@+id/answer_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/tv_question"
+            app:layout_constraintTop_toBottomOf="@id/tv_question">
+
+            <RadioButton
+                android:id="@+id/option_expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_expense" />
+
+            <RadioButton
+                android:id="@+id/option_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_income" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/icon_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/record_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/record_date"
+            app:srcCompat="@drawable/ic_date_range" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/record_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/str_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_date"
+            app:layout_constraintTop_toBottomOf="@id/answer_options">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/record_date_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:allowClickWhenDisabled="true"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/icon_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/record_note"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/record_note"
+            app:srcCompat="@drawable/ic_notes" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/record_note"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/str_note"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_note"
+            app:layout_constraintTop_toBottomOf="@id/record_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/record_note_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/str_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/icon_note"
+            app:layout_constraintTop_toBottomOf="@id/record_note" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
